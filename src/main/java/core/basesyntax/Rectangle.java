@@ -6,7 +6,7 @@ public class Rectangle extends Figure {
 
     public Rectangle(double side1, double side2, String color) {
         super(color);
-        if (side1 <= 0 && side2 <= 0) {
+        if (side1 <= 0 || side2 <= 0) {
             throw new IllegalArgumentException("Sides rectangle must be greater than 0");
         }
         this.side1 = side1;

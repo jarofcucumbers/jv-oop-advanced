@@ -1,9 +1,7 @@
 package core.basesyntax;
 
-public interface AreaCalculating {
+public interface AreaCalculable {
     double getArea();
 
     String getTypeFigure();
-
-    String draw();
 }

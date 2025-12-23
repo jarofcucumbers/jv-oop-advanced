@@ -1,12 +1,13 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
+    private static final double HALF = 0.5;
     private final double firstLeg;
     private final double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
-        if (firstLeg <= 0 && secondLeg <= 0) {
+        if (firstLeg <= 0 || secondLeg <= 0) {
             throw new IllegalArgumentException("Legs must be greater than 0");
         }
         this.firstLeg = firstLeg;
@@ -15,7 +16,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return 0.5 * firstLeg * secondLeg;
+        return HALF * firstLeg * secondLeg;
     }
 
     @Override
